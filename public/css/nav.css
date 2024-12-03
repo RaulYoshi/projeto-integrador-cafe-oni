@@ -1,0 +1,99 @@
+/* Cor de fundo da navbar */
+.navbar,.btn,.dropdown-menu, .btn-outline-dark {
+    background-color: #4b3621 !important; /* Cor Café mais escuro */
+    border-color: #4b3621 !important; /* Ajusta a borda para combinar com o fundo */
+}
+
+/* Cor do texto nos links e no título da navbar */
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* Texto branco para contraste */
+}
+
+/* Ajustes de hover */
+.navbar-brand:hover, .nav-link:hover {
+    color: #d4c0a1 !important; /* Tom claro ao passar o mouse */
+}
+
+/* Cor do texto nos botões */
+.btn, .dropdown-item {
+    color: #ffffff; /* Texto branco para contraste */
+}
+
+/* Cor do texto da navbar */
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* Mantém o texto da navbar visível */
+}
+
+/* Ajuste de hover para botões */
+.btn:hover, .dropdown-item:hover, .btn-outline-dark:hover {
+    background-color: #3e2c1b; /* Tom mais escuro ao passar o mouse */
+    border-color: #3e2c1b; /* Ajusta a borda no hover */
+}
+
+/* Ícone de carrinho */
+.btn-outline-dark .badge {
+    background-color: #3e2c1b; /* Ajuste para combinar com o hover */
+    color: #ffffff;
+}
+
+/* Estilização do header com imagem de fundo */
+header {
+    background-image: url('https://img.freepik.com/fotos-gratis/fundo-de-vista-superior-de-graos-de-cafe_176474-1987.jpg');
+    background-size: cover; /* Cobre toda a área do header */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    height: 400px; /* Define uma altura para o header */
+    color: white; /* Garante que o texto seja legível */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto */
+}
+
+/* Fundo geral do site */
+body {
+    background-color: #e4c8a0; /* Café mais intenso e claro que a navbar */
+}
+
+/* Fundo dos cards de produto */
+.card {
+    background-color: #d2b08c; /* Café claro, mas mais escuro que o fundo geral */
+    border: none; /* Remove bordas padrão */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+}
+
+/* Barra de pesquisa e filtro de categorias */
+.input-group, #category-filter {
+    background-color: #d2b08c; /* Mesma cor dos cards */
+    border: 1px solid #bfa17b; /* Sutil borda para destacar */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+/* Estilização adicional para o campo de pesquisa */
+#search-bar {
+    background-color: transparent; /* Transparente para herdar o fundo */
+    border: none; /* Remove a borda padrão */
+    outline: none; /* Remove o contorno ao focar */
+    color: #4b3621; /* Texto em café escuro */
+}
+
+/* Ícone de pesquisa */
+#search-icon {
+    background-color: transparent;
+    color: #4b3621; /* Ícone em café escuro */
+}
+
+/* Ajuste no seletor de categorias */
+#category-filter {
+    color: #4b3621; /* Texto em café escuro */
+}
+
+/* Footer com a mesma cor da navbar */
+footer {
+    background-color: #4b3621; /* Mesma cor do fundo da navbar */
+    color: #ffffff; /* Texto branco para contraste */
+}
+
+/* Alinha o texto e remove espaçamentos adicionais */
+footer p {
+    margin: 0;
+    text-align: center;
+}

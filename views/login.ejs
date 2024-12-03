@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Minha Loja</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Inclui a Navbar -->
+    <%- include('navbar') %>
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Login</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Formulário de Login -->
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="senha" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Logar</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <p>Não tem uma conta? <a href="/cadastro">Cadastre-se</a></p>
+                    </div>
+                    <div id="loginMessage" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner de consentimento de cookies -->
+    <div id="cookie-consent-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.8); color: white; padding: 10px; text-align: center;">
+        Este site usa cookies para garantir a melhor experiência. 
+    <button id="accept-cookies" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; cursor: pointer;">Aceitar</button>
+    </div>
+    <!-- Inclui o Footer -->
+    <%- include('footer') %>
+
+    <!-- Script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>    
+    <script src="js/carrinho.js"></script>    
+    <script src="js/usuario.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

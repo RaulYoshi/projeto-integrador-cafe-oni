@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-endereco {
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .card-endereco:hover {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Finalizar Pedido</h1>
+
+        <!-- Seleção de Endereço -->
+        <h3>Selecione um Endereço</h3>
+        <div id="enderecos" class="row">
+            <% enderecos.forEach(endereco => { %>
+                <div class="col-md-4">
+                    <div class="card card-endereco" data-id="<%= endereco.id %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= endereco.tipo_endereco %></h5>
+                            <p class="card-text">
+                                <%= endereco.rua %>, Nº <%= endereco.numero %><br>
+                                <%= endereco.bairro %>, <%= endereco.cidade %> - <%= endereco.estado %><br>
+                                CEP: <%= endereco.cep %>
+                            </p>
+                            <input type="radio" name="endereco" value="<%= endereco.id %>" class="form-check-input" style="display:none;">
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+        <!-- Seleção de Método de Pagamento -->
+        <h3 class="mt-4">Método de Pagamento</h3>
+        <select id="metodo-pagamento" class="form-select mb-4">
+            <option value="Cartão de Crédito">Cartão de Crédito</option>
+            <option value="Boleto">Boleto</option>
+            <option value="Pix">Pix</option>
+        </select>
+
+        <!-- Botão Finalizar -->
+        <button id="finalizarPedidoBtn" class="btn btn-primary">Finalizar Pedido</button>
+    </div>
+    <!-- Inclui o Footer -->
+    <%- include('footer') %>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>    
+    <script src="js/carrinho.js"></script>    
+    <script src="js/usuario.js"></script>
+</body>
+</html>

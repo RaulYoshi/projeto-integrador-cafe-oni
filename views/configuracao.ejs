@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Endereços</title>
+    <!-- Incluindo os estilos do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        #novoEnderecoForm, #editarEnderecoForm {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Inclui a Navbar -->
+    <%- include('navbar') %>
+
+    <h1>Configuração de Endereços</h1>
+
+    <!-- Botão para exibir o formulário de cadastro -->
+    <button id="novoEnderecoBtn" class="btn btn-primary mb-3">Cadastrar Novo Endereço</button>
+
+    <!-- Formulário de Novo Endereço -->
+    <div id="novoEnderecoForm">
+        <h2>Novo Endereço</h2>
+        <form id="formEndereco">
+            <label>Rua: <input type="text" id="rua" class="form-control" required></label><br>
+            <label>Número: <input type="text" id="numero" class="form-control" required></label><br>
+            <label>Bairro: <input type="text" id="bairro" class="form-control" required></label><br>
+            <label>Cidade: <input type="text" id="cidade" class="form-control" required></label><br>
+            <label>Estado: <input type="text" id="estado" class="form-control" required></label><br>
+            <label>CEP: <input type="text" id="cep" class="form-control" required></label><br>
+            <label>Tipo: 
+                <select id="tipo_endereco" class="form-select" required>
+                    <option value="Residencial">Residencial</option>
+                    <option value="Comercial">Comercial</option>
+                </select>
+            </label><br>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </form>
+    </div>
+
+    <!-- Formulário de Edição de Endereço (oculto até o clique de editar) -->
+    <div id="editarEnderecoForm">
+        <h2>Editar Endereço</h2>
+        <form id="formEditarEndereco">
+            <input type="hidden" id="editarEnderecoId"> <!-- ID do endereço -->
+            <label>Rua: <input type="text" id="editarRua" class="form-control" required></label><br>
+            <label>Número: <input type="text" id="editarNumero" class="form-control" required></label><br>
+            <label>Bairro: <input type="text" id="editarBairro" class="form-control" required></label><br>
+            <label>Cidade: <input type="text" id="editarCidade" class="form-control" required></label><br>
+            <label>Estado: <input type="text" id="editarEstado" class="form-control" required></label><br>
+            <label>CEP: <input type="text" id="editarCep" class="form-control" required></label><br>
+            <label>Tipo: 
+                <select id="editarTipoEndereco" class="form-select" required>
+                    <option value="Residencial">Residencial</option>
+                    <option value="Comercial">Comercial</option>
+                </select>
+            </label><br>
+            <button type="submit" class="btn btn-warning">Atualizar</button>
+        </form>
+    </div>
+
+    <h2>Seus Endereços</h2>
+    <table id="enderecosTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Rua</th>
+                <th>Número</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>CEP</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Endereços serão preenchidos aqui -->
+        </tbody>
+    </table>
+
+    <!-- Inclui o Footer -->
+    <%- include('footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/endereco.js"></script>
+    <script src="js/usuario.js"></script>
+    <script src="js/carrinho.js"></script>
+</body>
+</html>

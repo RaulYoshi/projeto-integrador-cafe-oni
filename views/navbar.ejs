@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/">Café Oni</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>                
+            </ul>
+
+            <!-- Botão de Usuário com Dropdown -->
+            <div class="btn-group ms-3">
+                <button class="btn btn-light dropdown-toggle" type="button" id="userDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-person-circle"></i> <span id="userName">Login</span>
+                </button>
+                <ul class="dropdown-menu" id="userDropdownMenu" aria-labelledby="userDropdownButton">
+                  <li><a class="dropdown-item" href="/pedidos">Pedidos</a></li>
+                  <li><a class="dropdown-item" href="/configuracao">Configurações</a></li>
+                  <li><a class="dropdown-item" href="/logout">Deslogar</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Botão de Carrinho -->
+            <form class="d-flex">
+                <a href="/carrinho" class="btn btn-outline-dark">
+                    <i class="bi-cart-fill me-1"></i>
+                    Carrinho
+                    <span id="cart-count" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Café Oni</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Deliciosos cafés para você</p>
+        </div>
+    </div>
+</header>
